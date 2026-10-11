@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>noblue</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <link rel="stylesheet" href="dar-certo.css">
+</head>
+
+<body>
+    <header class="meu-header">
+        <!-- md:navbar-expand avisa o Bootstrap 6 para mudar o comportamento em telas de computador -->
+        <nav class="navbar md:navbar-expand">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Noblue</a>
+                <!-- O texto que vai ficar logo embaixo do nome -->
+              
+                <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer"
+                    data-bs-target="#navbarDrawer" aria-controls="navbarDrawer" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" aria-hidden="true"></span>
+                </button>
+
+                <!-- md:navbar-collapse md:drawer-none removem o formato de gaveta mobile no computador -->
+                <dialog class="drawer drawer-end md:navbar-collapse md:drawer-none" tabindex="-1" id="navbarDrawer" aria-labelledby="navbarDrawerLabel">
+                    <div class="drawer-header md:d-none">
+                        <h5 class="drawer-title" id="navbarDrawerLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+                    </div>
+                    <div class="drawer-body mb-2 md:mb-0">
+                        <ul class="nav navbar-nav ms-md-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="sobre.html">sobre</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" type="button" data-bs-toggle="menu" aria-expanded="false">
+                                    cardapio
+                                </a>
+                                <div class="menu">
+                                    <a class="menu-item" href="comidas.html">comidas</a>
+                                    <hr class="menu-divider">
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">onde estamos localizados</a>
+                            </li>
+                        </ul>
+                    </div>
+                </dialog>
+            </div>
+        </nav>
+    </header>
+
+
+
+<section class="banner-principal">
+    <!-- Caixa da Esquerda (Textos e Botões) -->
+    <div class="banner-conteudo">
+        <p class="banner-text">— O SEU REFÚGIO DEPOIS DO PÔR DO SOL</p>
+        <h1 class="banner-title">O sabor que <br> faz seu dia <br> melhor.</h1>
+        <div class="banner-botoes">
+            <a href="#favoritos" class="btn-ver-menu">VER O MENU ➔</a>
+            <a href="./sobre.html" class="btn-sobre-nos">SOBRE NÓS</a>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="espacinho-da-decor">
+        <div class="textinho-da-decor">
+            <p>feito para desacelerar</p> <span>*</span>
+            <p>sabor com um toque de magia</p> <span>*</span>
+            <p>hoje merece sobremesa</p> <span>*</span>
+            <p>feito para desacelerar</p> <span>*</span>
+            <p>sabor com um toque de magia</p>
+        </div>
+    </div>
+</section>
+
+<section class="secao-menu">
+        <!-- O topo que segura o título e o texto explicativo -->
+
+
+        <div class="cabecalho-menu">
+            <h1>O que te chama?</h1>
+            <p>Escolha seu caminho. A carta muda com a estação, mas sempre tem espaço para mais um doce.</p>
+        </div>
+
+        <!-- A grade que junta todos os botões de categoria -->
+        <div class="grade-botoes">
+
+            <!-- Cada botão em formato de arco -->
+            <a href="#cafes" class="botao-arco">
+                <span class="texto">Cafés especiais</span>
+            </a>
+
+            <a href="#drinks" class="botao-arco">
+                <span class="texto">Drinks autorais</span>
+            </a>
+
+            <a href="#milkshakes" class="botao-arco">
+                <span class="texto">Milkshakes</span>
+            </a>
+
+            <a href="#cookies" class="botao-arco">
+                <span class="texto">Cookies</span>
+            </a>
+
+            <a href="#doces" class="botao-arco">
+                <span class="texto">Doces</span>
+            </a>
+
+            <a href="#salgados" class="botao-arco">
+                <span class="texto">Salgados</span>
+            </a>
+
+        </div>
+    </section>
+
+
+    <section class="secao-favoritos">
+    <!-- Cabeçalho com Título e Campo de Busca -->
+    <div class="topo-favoritos">
+        <h2 class="titulo-secao">Favoritos da casa</h2>
+        <div class="busca-carta">
+            <span class="lupa-busca">🔍</span>
+            <input type="text" placeholder="Buscar na carta">
+        </div>
+    </div>
+
+    <!-- Container dos Cards lado a lado -->
+    <div class="bloco-produtos">
+        
+        <!-- Produto 1 -->
+        <div class="caixa-produto">
+            <div class="foto-produto">
+                <img src="./milk oreo.jpeg" alt="Milkshake Oreo">
+                <span class="etiqueta-foto">O Queridinho</span>
+                <button class="btn-favoritar">❤️</button>
+            </div>
+            <div class="dados-produto">
+                <h3>Milkshake Oreo</h3>
+                <span class="preco">R$ 23</span>
+            </div>
+            <p class="descricao-produto">Creme gelado, biscoito crocante e uma nuvem de chantilly.</p>
+            <div class="rodape-produto">
+                <span class="categoria-produto">MILKSHAKES</span>
+                <a href="#provar" class="link-provar">QUERO PROVAR ➔</a>
+            </div>
+        </div>
+
+       
+
+        <!-- Produto 3 -->
+        <div class="caixa-produto">
+            <div class="foto-produto">
+                <img src="./WhatsApp Image 2026-10-11 at 19.55.24.jpeg" alt="Matcha de Morango">
+                <span class="etiqueta-foto">Novo Ritual</span>
+                <button class="btn-favoritar">❤️</button>
+            </div>
+            <div class="dados-produto">
+                <h3>Matcha de Morango</h3>
+                <span class="preco">R$ 19</span>
+            </div>
+            <p class="descricao-produto">Matcha batido na hora, leite cremoso e morangos frescos.</p>
+            <div class="rodape-produto">
+                <span class="categoria-produto">BEBIDAS GELADAS</span>
+                <a href="#provar" class="link-provar">QUERO PROVAR ➔</a>
+            </div>
+        </div>
+
+        <!-- Produto 4 (Adicionado para ficar igual à imagem) -->
+        <div class="caixa-produto">
+            <div class="foto-produto">
+                <img src="./WhatsApp Image 2026-10-11 at 19.55.25.jpeg" alt="Moonberry Fizz">
+                <span class="etiqueta-foto">Sem Álcool</span>
+                <button class="btn-favoritar">❤️</button>
+            </div>
+            <div class="dados-produto">
+                <h3>Moonberry Fizz</h3>
+                <span class="preco">R$ 22</span>
+            </div>
+            <p class="descricao-produto">Amora, limão, água com gás e brilho comestível. Sem álcool.</p>
+            <div class="rodape-produto">
+                <span class="categoria-produto">DRINKS AUTORAIS</span>
+                <a href="#provar" class="link-provar">QUERO PROVAR ➔</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+<footer class="rodape-principal">
+        <div class="conteudo-rodape">
+
+            <!-- Lado Esquerdo: Nome da marca e uma breve descrição -->
+            <div class="coluna-marca">
+                <h3 class="nome-marca">Café da Casa</h3>
+                <p class="texto-descricao">O lugar perfeito para uma pausa no seu dia, com cafés especiais e doces
+                    artesanais.</p>
+            </div>
+
+
+
+            <div class="coluna-contato">
+                <h4>Funcionamento</h4>
+                <p class="texto-funcionamento">Terça a Domingo — 09h às 20h</p>
+                <div class="icones-redes">
+
+                    <a href="#instagram" title="Instagram"></a>
+                    <a href="#whatsapp" title="WhatsApp"></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="coluna-marca">
+            <h3 class="nome-marca">Café da Casa</h3>
+            <p class="texto-descricao">O lugar perfeito para uma pausa no seu dia, com cafés especiais e doces
+                artesanais.</p>
+        </div>
+
+
+
+        <div class="base-rodape">
+            <p>&copy; 2026 Café da Casa. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,657 @@
+body {
+    background-color: rgb(255, 239, 250);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    background-color: rgb(71, 3, 35);
+    padding: 10px 20px;
+}
+
+/* Deixa o ícone do botão hambúrguer totalmente branco */
+.navbar-toggler-icon {
+    filter: invert(1) !important;
+}
+
+
+/* Garante a transparência total dos containers internos do menu */
+.navbar, 
+.drawer,
+.drawer-body,
+.nav-item {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+/* Configura as cores padrão dos textos e links para branco */
+.meu-header .nav-link, 
+.meu-header .navbar-brand,
+.meu-header button.nav-link {
+    color: #ffffff !important;
+    background-color: transparent !important;
+    text-decoration: none;
+}
+
+
+   @media (max-width: 767px) {
+    /* Força o container a jogar tudo para o início (topo) */
+    .drawer-body {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important; 
+        align-items: flex-start !important;
+        padding-top: 20px !important;
+    }
+
+    /* Organiza a lista em coluna com espaçamento normal de 15px */
+    .navbar-nav {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+        width: 100% !important;
+    }
+
+    .navbar-nav .nav-item {
+        width: 100% !important;
+    }
+}
+.meu-header .nav-link,
+    .meu-header button.nav-link,
+    #navbarDrawerLabel {
+        color: #000000 !important;
+    }
+
+/* --- TELA DO COMPUTADOR --- */
+@media (min-width: 768px) {
+    .navbar-nav {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 30px !important;
+        align-items: center !important;
+    }
+    .navbar-nav .nav-item {
+        width: auto !important;
+    }
+.drawer-body, .drawer {
+    display: flex !important;
+    width: 100% !important;
+    justify-content: flex-end !important; /* Joga os itens para o final */
+}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Container Geral do Banner */
+.banner-principal {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide a tela em duas colunas iguais */
+    align-items: center;
+    background-color: #fcf9f5; /* Cor de fundo idêntica à imagem */
+    padding: 60px 8%;
+    min-height: 80vh;
+    gap: 40px;
+}
+
+/* Alinhamento dos textos na esquerda */
+.banner-conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Subtítulo menor do topo */
+.banner-text {
+    color: #8c7370;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+/* Título Principal Grande */
+.banner-title {
+    font-family: 'Playfair Display', serif; /* Ou a fonte serifada do seu projeto */
+    color: #401625; /* Vinho escuro da imagem */
+    font-size: 4rem;
+    line-height: 1.1;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Parágrafo de descrição */
+.banner-descricao {
+    color: #7d6866;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 450px;
+    margin: 10px 0 20px 0;
+}
+
+/* Caixa dos Botões lado a lado */
+.banner-botoes {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Botão "Ver o Menu" (Vinho) */
+.btn-ver-menu {
+    background-color: #401625;
+    color: white !important;
+    padding: 14px 28px;
+    border-radius: 50px; /* Deixa arredondado nas pontas */
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn-ver-menu:hover {
+    background-color: #592235;
+}
+
+/* Botão "Sobre Nós" (Transparente com borda) */
+.btn-sobre-nos {
+    background-color: transparent;
+    color: #401625 !important;
+    border: 1px solid #401625;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-sobre-nos:hover {
+    background-color: #401625;
+    color: white !important;
+}
+
+
+
+
+/* Responsividade simples para o Celular */
+@media (max-width: 991px) {
+    .banner-principal {
+        grid-template-columns: 1fr; /* No celular, vira uma coluna só (tudo um embaixo do outro) */
+        text-align: center;
+        padding: 40px 20px;
+    }
+    .banner-descricao {
+        margin-inline: auto;
+    }
+    .banner-botoes {
+        justify-content: center;
+    }
+    .banner-title {
+        font-size: 2.8rem;
+    }
+}
+
+
+
+/* A barra vinho horizontal que atravessa a tela */
+.espacinho-da-decor {
+    background-color: #712a43; /* O mesmo vinho escuro da imagem */
+    width: 100%;
+    padding: 15px 0; /* Controla a altura/grossura da barra */
+    overflow: hidden; /* Garante que o texto não quebre a tela se for longo */
+}
+
+/* Força todos os textos e estrelinhas a ficarem lado a lado em linha */
+.textinho-da-decor {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center; /* Centraliza o bloco na tela */
+    align-items: center;     /* Alinha todos perfeitamente no meio (vertical) */
+    gap: 25px;               /* Distância exata entre cada frase e o asterisco */
+}
+
+/* Estilo das letras (Brancas, serifadas e elegantes) */
+.textinho-da-decor p {
+    color: #fffaf6 !important; /* Branco suave da imagem */
+    font-family: 'Playfair Display', Georgia, serif; /* Fonte serifada elegante */
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0 !important;
+    white-space: nowrap; /* Impede que as frases quebrem linha */
+}
+
+/* Estilo do asterisco/separador */
+.textinho-da-decor span {
+    color: rgba(255, 250, 246, 0.4); /* Deixa o asterisco levemente transparente e elegante */
+    font-size: 1rem;
+}
+
+
+
+/* Container principal da seção */
+.secao-menu {
+    background-color: #fcf9f5; /* Fundo creme igual ao da imagem */
+    padding: 60px 8%;
+    font-family: sans-serif;
+}
+
+/* Alinha o título na esquerda e o parágrafo na direita no computador */
+.cabecalho-menu {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    gap: 40px;
+}
+
+.titulo-menu {
+    color: #401625; /* Vinho escuro */
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin: 0;
+    flex: 1;
+}
+
+.texto-menu {
+    color: #7d6866;
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 400px;
+    margin: 0;
+    padding-top: 15px; /* Alinha levemente com o topo do título */
+}
+
+/* Container dos botões arqueados colocados lado a lado */
+.grade-botoes {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap; /* Quebra linha se a tela for menor */
+}
+
+/* O SEGREDO DO ARCO: Arredondar apenas os cantos de cima */
+.botao-arco {
+    flex: 1;
+    min-width: 130px; /* Impede de esmagar demais */
+    height: 160px;
+    background-color: #f4eee8; /* Fundo do arco ligeiramente mais escuro que a tela */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    
+    /* 👇 Borda de Arco: cima-esquerda, cima-direita, baixo-direita, baixo-esquerda 👇 */
+    border-radius: 80px 80px 20px 20px !important; 
+    
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none !important;
+    gap: 12px;
+    padding: 20px 10px;
+    transition: all 0.3s ease;
+}
+
+/* Efeito sutil ao passar o mouse */
+.botao-arco:hover {
+    transform: translateY(-5px);
+    background-color: #ede5dc;
+}
+
+
+/* Estilo dos textos dos botões */
+.botao-arco .texto {
+    color: #401625 !important;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.3;
+    
+}
+
+/* Ajuste rápido para telas de celular */
+@media (max-width: 767px) {
+    .cabecalho-menu {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+    .titulo-menu {
+        font-size: 2.3rem;
+    }
+    .grade-botoes {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr); /* 3 arcos por linha no celular */
+        gap: 10px;
+    }
+    .botao-arco {
+        height: 130px;
+        border-radius: 60px 60px 15px 10px !important;
+    }
+}
+
+/* Container Principal */
+.secao-favoritos {
+    background-color: #fcf9f5;
+    padding: 60px 6%;
+    font-family: sans-serif;
+}
+
+/* Alinhamento do Título e Campo de Busca */
+.topo-favoritos {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 15px;
+}
+
+.titulo-secao {
+    color: #401625;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Campo de busca minimalista da direita */
+.busca-carta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid #7d6866;
+    padding: 5px;
+}
+
+.busca-carta input {
+    border: none;
+    background: transparent;
+    outline: none;
+    color: #401625;
+    font-size: 0.9rem;
+}
+
+.busca-carta input::placeholder {
+    color: #a69492;
+}
+
+/* Alinhamento dos Cards Lado a Lado */
+.bloco-produtos {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Quebra linha se a tela diminuir */
+}
+
+/* Estrutura de cada Card de Produto */
+.caixa-produto {
+    flex: 1;
+    min-width: 250px; /* Impede os cards de esmagarem */
+    background: transparent;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* Área da foto e posicionamento das etiquetas internas */
+.foto-produto {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Força a foto a ser perfeitamente quadrada */
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.foto-produto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #ebdcd5; /* Cor cinza/pastél de fundo caso a foto falhe */
+}
+
+/* Etiqueta branca do canto superior esquerdo */
+.etiqueta-foto {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: #ffffff;
+    color: #7d6866;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Botão de coração flutuante */
+.btn-favoritar {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: white;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Título do produto e Preço na mesma linha */
+.dados-produto {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+}
+
+.dados-produto h3 {
+    color: #401625;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.dados-produto .preco {
+    color: #401625;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* Texto de Descrição */
+.descricao-produto {
+    color: #7d6866;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 20px !important;
+    flex-grow: 1; /* Faz todas as caixas de texto terem a mesma altura */
+}
+
+/* Rodapé do card alinhar categorias e links */
+.rodape-produto {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding-top: 12px;
+    margin-top: auto; /* Cola o rodapé firmemente na base do card */
+}
+
+.categoria-produto {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #7d6866;
+    background-color: #ebdcd5; /* Fundo pastél sutil */
+    padding: 4px 8px;
+    letter-spacing: 0.5px;
+}
+
+.link-provar {
+    color: #401625 !important;
+    text-decoration: none !important;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: transform 0.2s;
+}
+
+.link-provar:hover {
+    transform: translateX(3px);
+}
+
+/* Responsividade simples para o Celular */
+@media (max-width: 767px) {
+    .topo-favoritos {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .titulo-secao {
+        font-size: 2.2rem;
+    }
+    .bloco-produtos {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr); /* 2 produtos por linha no celular */
+        gap: 15px;
+    }
+}
+@media (max-width: 480px) {
+    .bloco-produtos {
+        grid-template-columns: 1fr; /* 1 produto por linha em telas muito pequenas */
+    }
+}
+/* Container Geral do Rodapé */
+.rodape-principal {
+    background-color: #401625; /* Vinho escuro igual ao restante do site */
+    color: #fffaf6 !important; /* Letras brancas suaves */
+    padding: 60px 8% 20px 8%;
+    font-family: sans-serif;
+}
+
+/* Alinha as 3 colunas lado a lado no computador */
+.conteudo-rodape {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Linha fina de divisão */
+}
+
+/* Títulos das colunas */
+.rodape-principal h3, 
+.rodape-principal h4 {
+    color: #ffffff !important;
+    font-family: 'Playfair Display', Georgia, serif;
+    margin-bottom: 20px !important;
+}
+
+.rodape-principal h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.rodape-principal h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Textos descritivos */
+.texto-descricao, 
+.texto-funcionamento {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 320px;
+}
+
+/* Lista de Links de Navegação */
+.coluna-links .lista-links {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.coluna-links .lista-links li {
+    margin-bottom: 12px;
+}
+
+.coluna-links .lista-links a {
+    color: rgba(255, 255, 255, 0.7) !important;
+    text-decoration: none !important;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.coluna-links .lista-links a:hover {
+    color: #ffffff !important;
+}
+
+/* Botões de Redes Sociais */
+.icones-redes {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.icones-redes a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-size: 0.9rem;
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 8px 16px;
+    border-radius: 50px;
+    transition: background 0.2s;
+}
+
+.icones-redes a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Linha de Direitos Autorais na Base */
+.base-rodape {
+    text-align: center;
+    padding-top: 20px;
+    color: rgba(255, 255, 255, 0.4) !important;
+    font-size: 0.85rem;
+}
+
+/* Ajuste responsivo automático para Celular */
+@media (max-width: 767px) {
+    .conteudo-rodape {
+        flex-direction: column !important; /* Empilha as 3 caixas verticalmente */
+        gap: 35px;
+    }
+    
+    .texto-descricao, 
+    .texto-funcionamento {
+        max-width: 100%;
+    }
+}

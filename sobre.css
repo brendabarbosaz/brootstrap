@@ -1,0 +1,273 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ebdcd5; 
+    font-family: Arial, sans-serif;
+}
+
+
+.secao-historia {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    padding: 80px 8%;
+    background-color: #ebdcd5;
+    min-height: 100vh;
+}
+
+
+.container-imagem-historia {
+    position: relative;
+    flex: 1;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.img-historia {
+    width: 100%;
+    height: auto;
+    border-radius: 30px; 
+    object-fit: cover;
+}
+
+
+.selo-afeto {
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    background-color: #9cb182;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.selo-linha-1, .selo-linha-3 {
+    color: #401625;
+    font-size: 0.65rem;
+    letter-spacing: 0.5px;
+}
+
+.selo-linha-2 {
+    color: #401625;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    margin: 4px 0;
+}
+
+
+.conteudo-historia {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.subtitulo-historia {
+    color: #8c7370;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.titulo-historia {
+    color: #401625; 
+    font-family: Georgia, serif;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.titulo-historia i {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.textos-narrativa p {
+    color: #5c4a47;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.textos-narrativa p:last-child {
+    margin-bottom: 0;
+}
+
+.assinatura {
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: #401625;
+    font-size: 1.6rem;
+    margin-top: 10px;
+}
+
+
+.btn-conhecer {
+    display: inline-block;
+    width: fit-content;
+    border: 1px solid #401625;
+    background-color: transparent;
+    color: #401625;
+    padding: 14px 35px;
+    border-radius: 50px; 
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-conhecer:hover {
+    background-color: #401625;
+    color: #ffffff;
+}
+
+
+@media (max-width: 900px) {
+    .secao-historia {
+        flex-direction: column !important; 
+        text-align: center;
+        padding: 60px 5%;
+        gap: 50px;
+    }
+
+    .container-imagem-historia {
+        max-width: 100%;
+        width: 85%; 
+    }
+
+    .titulo-historia {
+        font-size: 2.8rem;
+    }
+
+    .btn-conhecer {
+        margin: 0 auto; 
+    }
+}
+.rodape-principal {
+    background-color: #401625; /* Vinho escuro igual ao restante do site */
+    color: #fffaf6 !important; /* Letras brancas suaves */
+    padding: 60px 8% 20px 8%;
+    font-family: sans-serif;
+}
+
+/* Alinha as 3 colunas lado a lado no computador */
+.conteudo-rodape {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Linha fina de divisão */
+}
+
+/* Títulos das colunas */
+.rodape-principal h3, 
+.rodape-principal h4 {
+    color: #ffffff !important;
+    font-family: 'Playfair Display', Georgia, serif;
+    margin-bottom: 20px !important;
+}
+
+.rodape-principal h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.rodape-principal h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Textos descritivos */
+.texto-descricao, 
+.texto-funcionamento {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 320px;
+}
+
+/* Lista de Links de Navegação */
+.coluna-links .lista-links {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.coluna-links .lista-links li {
+    margin-bottom: 12px;
+}
+
+.coluna-links .lista-links a {
+    color: rgba(255, 255, 255, 0.7) !important;
+    text-decoration: none !important;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.coluna-links .lista-links a:hover {
+    color: #ffffff !important;
+}
+
+/* Botões de Redes Sociais */
+.icones-redes {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.icones-redes a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-size: 0.9rem;
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 8px 16px;
+    border-radius: 50px;
+    transition: background 0.2s;
+}
+
+.icones-redes a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Linha de Direitos Autorais na Base */
+.base-rodape {
+    text-align: center;
+    padding-top: 20px;
+    color: rgba(255, 255, 255, 0.4) !important;
+    font-size: 0.85rem;
+}
+
+/* Ajuste responsivo automático para Celular */
+@media (max-width: 767px) {
+    .conteudo-rodape {
+        flex-direction: column !important; /* Empilha as 3 caixas verticalmente */
+        gap: 35px;
+    }
+    
+    .texto-descricao, 
+    .texto-funcionamento {
+        max-width: 100%;
+    }
+}
